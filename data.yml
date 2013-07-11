@@ -1,11 +1,12 @@
-title : Blog Title
-tagline: Blog Tagline
+title : Dejian's Blog
+tagline: DevOps
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Dejian Xu
+  googleplus : 116305544434538996428
+  email : xudejian2008@gmail.com
+  github : xudejian
+  twitter : xudejian
+  feedburner : xudejian
 
 navigation :
   - archive
