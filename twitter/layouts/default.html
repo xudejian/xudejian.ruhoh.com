@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}{{^ page.lang }}zh-CN{{/ page.lang }}">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
@@ -8,6 +8,7 @@
     <meta name="description" content="{{ . }}">
   {{/ page.description }}
     <meta name="author" content="{{ data.author.name }}">
+    <link rel="author" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>

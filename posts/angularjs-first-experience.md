@@ -1,7 +1,7 @@
 ---
 title: angularjs first experience
 date: '2013-07-12'
-description: angularjs first experience
+description: angularjs first experience, 一篇angular经验帖
 categories: 'code/angularjs'
 tags: [angularjs,experience,javascript]
 ---
