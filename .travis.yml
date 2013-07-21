@@ -19,9 +19,11 @@ before_script:
   - bundle exec ruhoh compile
   # clone github pages repo
   - git clone $REPO
-  - cd xudejian.github.io
-  - rsync -a ../compiled/ ./
+  - cd xudejian/xudejian.github.io
+  - rsync -a ../../compiled/ ./
   - git add .
+  - git status
+  - env
   #- git push origin
 script: "echo 'OK'"
 env:
