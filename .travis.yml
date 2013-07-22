@@ -20,37 +20,38 @@ script:
   - mv -f config.xudejian.github.io.yml config.yml
   - bundle exec ruhoh compile
 after_script:
+  - cp baidu_verify_25JCE7NwQ9.html google3674f8fdb9c1b1b4.html compiled/
   - cd compiled
   - git init
-  - git add .
-  - git status
   - git remote add origin $REPO
-  #- git push -u origin
+  - git add .
+  - git commit -m 'Dejian blog, automated generate from CI'
+  - git push --force origin master
 env:
   global:
     # Repo read-write address
     - REPO="git@github.com:xudejian/xudejian.github.io.git"
     # SSH key. Encoded. See https://gist.github.com/4631240
-    - secure: "n4wDxXr9uJgABmy242Rq3wPFwqLY6r/+TUKS6a0P7cvldBUFmmA3H4NJJBVnn3MQtJKB3j+6gat4k9pGceut9w6/uH9Wd9ytiZfDekdILwPjbamVxejzHmCxmHw/PnrUirW1inoKee17IAcvp4msUyllpOw0whrNtXWydHYd+6A="
-    - secure: "rBwvCqgnw+BQKGCEXqxS6sxdfv8U4Lak9sJS7W1sMl8iEQalBpo0sn0PCNP2E96OXpRaN7cYPZJt4NR86UmvgynS/jTNKKWrKlst28py374hMtY/841abu4fPtfwfoh8Ry2w/3H2KAKb0YPjZ7Lwgl5GhleLkcPllAQOerxc80w="
-    - secure: "T0gnV/H3QxkDhLpb1qbWC3wbwOBvAXM+f/9DrIOkesxhKeeJ8D5/4v/cGnGHL+bhV4RBTURYzQw5fOhleDKxoqArk0/a+cQ43Q/fX5zG1XhDk50yYVSAG9Rn9dFAA4cVyeH1S7hiyqiyQ1osXBm4YhAtdH7fTD1GIJk7S5bbRQY="
-    - secure: "qnqAb5wHzrZXHN+PRDmN9nsQ2sLuZxdZF58vBdY/boI03GgaWicdn7CbksMThgpiAEvSYyuqePYMOyxDaA++vRJGnqgh1N9IQ6F5wPMYn6HTum6TBVI+kfO15iiUhh4VTtv/yeSnCyTvLKMuCSLMA/YEQREUg3V7ds+N1ZpGMoY="
-    - secure: "aGoN+YjtABRfIj4KiXbEUarL704sZVxZn3Y6g6AsOq2bqb+13eSrC2oLM9BToug7fwyWp6T+SIn/66UjLvpVqlJENOp+Tj93VOeskfb0H0AO2JSFfp/2qk7ordlwPPJ6gepQhn9gDtESVC58yeX/BqEKHorQUSnr73Ye7hb/e/I="
-    - secure: "o8MNhsXCWcnF7AZ9zIDWB7z4e3zupmUdNyg6SmwKR0UZa9V7ReTf57mhPHDUYJoaoP3sv1gCIOQhTNR9B55UNRGoZnxT10E2THrjomL++tpAuIsmldSKjEyvMY0o9cpNNeRZwsYv1HuPqKG3XIj+hlQtCysAS0GEZBAUsDcke3g="
-    - secure: "KH8FECWcUV/IiZYQJQkk9jojQf8UM92UpbIfaE5mT8+mmG7aiFYzOoWhwY32Yqu9aajgMl0lu1rdTh0LWvY9vENS91kWOicJjVQBSIib8l37Q55dAdlWSES2TegHPFc7sf278RuRWZ9ThnJfGF2LUlyMK/NgR4qiPmXrIejTBGI="
-    - secure: "DkVw3XixdkHv75tcjwk1lK4qbTD1lyxpWiCgi6RyiUM3hJ0WWv4/4QRsPE3gKWSA87pNSCdo2lt6tbd24ebo3FePWRhFdRKxJ0uIzxUDyDz+hwygdYEOlyI0uy1d8waBcZLph+vQuY/hy9J7SYKfJdbP77Owb57n7ey1GJXs86M="
-    - secure: "VCSlwpxXtilg+PiD2WpO3KL8NIdPzspWDvnlRX8kz9kU62rslpqq3BENjk/PZv9VplqQC7Al5oUWgfyWhRpgdoiCjSSMkbUkbLAeykJQIrNDG9fg17UWefoUn3I10lQG7eHWC74aDlUiU6q0rzL1E8fL2MRmTiECt1x56kzP8JY="
-    - secure: "Gvsr7obmYbYAf3F1kMt3Cc+cmTgeo4d5laNKRtehxEv7/NVuBaQjlQHpMry901uVKvu07PuPEbp7sernJwcLRbRMQmDkNi/Wo4U+SxU2RDJs/FnbsZO8c66G4LIo5/juwi6CQ86Otqam9X6fmAEMA/blMI4HQSx9jysp41VD1nI="
-    - secure: "qK/ZG0GJRe/acf/JIiatPbFt362P91C7Do2Sw9z/uHs0XZFyMrCPMtkByRf1g6DremIp2Ff5VLBkk+FBsjY/Ysh8UQjIRSX6xaN5GeIjMjDR7xZ642fygAPngBdfjsmvRD5c+HYhvWoobNWzCSbrE/7njB6hG1MFzD962VVoO9o="
-    - secure: "DJKyM4XIKdAx8TuMH0pkVGHj3DSSqlsiXBgefgowhfxCgCNjGN7BB/GV9I/nGz4ws20C8O2TrWWBNSE96LW8cR3Xn4RyBUcpjl7doFtpCnR6L3Y0xmG2sDZkEVj+BKVAoFh164bD22E0rKocP/CtICVK1qzwLqLlk8MI0IzH11Y="
-    - secure: "JPXtNXdAxfo9+kEX2syoT2RL35TUYmzKc/KYKj2j5FK43ZrYSkXisOyWm7/1Oz5ZqxTrOXsHINeMCpe6I3znPSifPX5dIhPFgy7V7jVE4aLDCkdNMntcoXTHrxfIeBz1DnUerdFT0hy9cLXiAol2NvJZ8vWDQXszK8dDmEfR+hc="
-    - secure: "o/61z0jpPF8+J+0VaeU44oSih530+VOp92Bx92/VzeMwceh1S8bwqXPaAGxwcl3IFs66gZiOB6kIXZF7yP3nWK1L3kKOn6XY6gsAbdYWWugSTREpLBCaC/6hRTX97e9/XYBnDFK096cFJI5k2+q1mhRCeJhVbAY9Gc7YcLUiuEU="
-    - secure: "UQ+IGoYgNxogBLEx+IYaxzj2YuSVhwE56pNmoRLcKCoc1F/HznZvN0o9JskAizpvCWypNUVeRtkdClBQYQdN7Gf8VyQXO6gdAmpM8y+PYHVU5YM4jgIPmvAUt1nrrLaiRqsF/o9SF+7YnMHdIosmXHhh8xc+iRolwniNN1L5+Qg="
-    - secure: "NJvdfTz4PCR3RPFLkbn9RtyXuR3PC+W5viwoLhyEHZeoc3wzXaAA6kriYGAnNMHmZp6DHxeUfbAyK9uxJY6ViJG1iVMRU/9jAgTkHSk3Z9HXbV9Z6LEGPflZAObW/DJFOVsJftt2VxV8EmlCqdKrCvB2lc9Jhc8M8J9TmrU89EY="
-    - secure: "hiA2rO0uRsKKET6SEuEyRWzP0PrgpwXqSU105E2BEGQ64tNrV25eHjFWbOOS/tp2lX0xP9Q3AIaAVDfmZrEzjPZgkbJr+y9zk3bGcsLyrWFxNZkT3xzb83NvR4MQ5lEPXM3mpkg+RzwwBkZObPmh8XYrtb0aW0Jw/asSVwwjVFc="
-    - secure: "Is1Y64q8/ppfRrx3buyOdWuM2eRiU8rNGCD/tubkUeGN1/k0QVf/EdmW834opyVov7g4boCI5BfybQOzSgIuZLYK94jyby7mca2bq/qwqDM+QKzZFceJrgQA/qDcZxNX10Jawv+eDJXEw819c6hdzskvQgg/OKi5gtMHnv+eaAA="
-    - secure: "IZPFzINbf4T3SqcHrzSobEP0ufngwNjJpHqyKyTNO4d45V/qAaPBut7KhRStNILHYzxVN7n5XMNuBNaemRYRyf4bmDzZETTfPP99RIvInlQyx6I/tqCJLFtgV5+8keWvd6Mdzz2Rmd0JC9w3JX/PXYvBfg9W8lhlZ1Er8hECqjU="
-    - secure: "dMBZ1LytZHqAFx9UidVX1XfyJ1PFUcO4bVE12V4QxuXcrqCPdk49toxQ4gNaHOSwa/w/JA4ZiqS1srhxDe+c7arHagXOU+RRKnhbGrCAKWKNk9NBp7iEPvLAevNlWR0v/5kbF8XSZDEFgC6vKSXS07oLoU5ZUFpmuQDMlGXzBQk="
-    - secure: "Q6oTqSHYvGMHRxlK4MHbJQl3YF4iHcUR7ibBFVxLMngHfKGHIBz7V3rdPHh3L+F/8JQgtul2M40u/O+p9DBLst4GoiOm9xGYJYS1Ri8qvn25Zju2a0iAj2gIOKeUTkG873koJ8CuA/XUFWSdW3gWGyPW3DDofBTpBztGf/3sjO0="
-    - secure: "EuOxPcQRfmS3xE3FwGbLjW/jNDpGI90juNjL+b/3kRy56QIUh/gqGfX6ftD/SB8NLLeSMpBQUzC4A2eZ3C7z3VqK+qyFZssWL7udFX3DgGE6Y/AiTucZI2whbE5PMHrU+O4QR2xz3zb0B16r4xydY+ViNloinRTenhvkkzUrNa8="
-    - secure: "Vrw6STuZ8Xe1IcWLyyncgsAmJCoq2xFD/BCaH/VVm5fu1D7S+Br+eC88McyIrMTnfaq1EeBxiSyOXbdwzDnS5GDkfTrPUAu7XtxclZr/pwcqTYWeYBHiJcKqZorgwUZahTtgdnFb5m2ehSPWXDL3O2qxgufq0rs7w0lTLS6KAPs="
+    - secure: "Bv/vboPkSTntQhEC3VRGipbGZ0IEyfrcqwj14+7hFSn20/RjHFf1gSl7C/Kybs59d1+sdMIdj0JUvhkYJoO+YhUEyXVdHsY184cAMd3/MVEGbOck4l3aqOvP7ZeHsgNNvN3XbnM/kMxtMGLUXsSbAY2BEOzGLZIAVMO4mSBIi/k="
+    - secure: "FTvssoNpfQ+zaFQxu5epInrcsqnkOc1qZaXsx0fpWrMXgghlPRbtl6q8isANCjwffblGljl+5y+E8p4mxb52kk8u9YiMqMroBlERxr3/a0+8cRFkH6K/OK19ddJujDRFA/ZsRgOisGEUitcj3FWofPGAY535FavytxVKKQisJeI="
+    - secure: "A0sQdlDKIwXoRiHKGKPBFb2kz4S1PNeTGIT9ekxLoylM5OVO9U6PQ9AJTo0vwHDLDLi38YmGSrKRgxTh9RM0s1/WUzstQGoGhRQt0HkhukPit561iSR9bi1EhjOM6UIOrtfnOqA/+vXeQDm60pq45+fgfUZYYZzvmhX9hNJXvUE="
+    - secure: "L/MGiLHXzXO5ApBLBrrN0yZCTZNmOneK7q2s3Y3WRa8glT++2t7g55I9b9gpAyPjLrkNrIJBfsNJluKj0mbGtrdo/se4eGsHW8zqtUxymQUviHzUYPo4Vn5hWVl0gM8CrSOcTyNbJBeJJ6OXU8bZnwXEtzM84qSj3yEhxdK7Vec="
+    - secure: "elra17iJb/dFTjFOXC2ItBykfggsfrPGpiPPNLFQrpjqEH7dzFxhWUXHBco66b9VB+jrPug6uwFVneh7oNR5VqtAzskvv3F2/sxrzHAzNI9UjZtIdoiayp2e+fNglxd2DjgyvjsSJUrbr4fnVJZ7705NdmrcMEW/BjAbKnj0Tfs="
+    - secure: "g74ckCyzgOJNKCv2jMONL2sRklI7U5hM9xS53ewBwiU/5snbzv86fxZUw7PGn56Y/JfWPYX+vBMmhT8Wi8HLrGc2P7cAxqLqHX++BC+kvcDwCDmVBxndJCB9O8xV5eqUbgfLngFNNLAuxoilodISXFEBVpZC6JeGBrY2w2VxN4U="
+    - secure: "A0Me3ZeauFRXSxeIyNoOOmoCq0hPq3kNHzQbK4Ki0ZJQqoYz9Yh4P2+7vCHHHP6h2p/ou5D39WacRbFka665355KEdtyEaq+nimL+3HyIRc1q5+gJdAPxvpl3CE6Ywu/eBnZ9qtlslbt+vGwT8Tn6OLZByVkJDfq6F2G+5EoT+0="
+    - secure: "JIhpZidXnMEo9c7Mw6qmgHGWC6WG6bjmDGukjxhC4fUSWfCdXsSSfwLk4dy/X9ggf6Pa2wdhWahIfgixo3cIw8skMoo/jPkIM9mL76Z9DEzSYw9aB/XpcCha6REmzcwFKE6R08XI0XHAbo4JJ06t2cRXnkmo7jEnxxHLKPFVq38="
+    - secure: "g1zKAFqRGL4rYOLwO1AALjB96Wtc+kloPbbUxhl6KzHUlZFy5ZDD6imgMGDJCSWiBCpICoy4v5cAyl1Cw5KCb2IjKGQHx3f5yKe0lvo/vkbvLPjpBNO+bTUc5N7zMbPbf19wJzV29EeV+hn5oFpByMWTJtm6281QBD51Yhdc62c="
+    - secure: "FwL8WuRcw8SC1F9yBByGLPLUlauWi2iDsLcFvOccdwnMMYtub9T2+Rfnj8nPCHkLeQKtKZfgyCpRob3XkS5lNm0g0do+xzlV4cUMNTsEBUQVSAPdZyy1Ze1zpMcVxZNbyJrj9IX/LbUM1VeiMTMrq/9l7xZTkoNmlpKttEYSwWs="
+    - secure: "KwJX3PqNABsaTf4thbyR6Ra9DbS9OrMr+mt704Y0Ld+2PBjLiHmlehnB4aJGrpSiM074MWHGqJd6tDvauUwziKIM3FS17cRBw/78Vg1OPBcDOCb12EBkZEGzfb/906ye8wU3XQc7pZCX4wuarxY0Qbhbaw5bDGbqNEWLmO/tjF4="
+    - secure: "G01PmmFagFljnSF/fTY6Inp0vxdIrExsjJ9Xtmb9rO75Z/sXJQ4aLIDXV1s+eozl5DLsXTvvnbQrrGgaRQ8BKP7VjARNsIw8m+XByua0LtIPoBokmnNvX0hauOwC/3FJkQC8HIageMN7oRmbfV166Ifukh/YK0khYceFQGetLvI="
+    - secure: "JVnOoFNPvtx7cpXR1ZoTKOFjJ/VeAtb5GX4P2bON8+FlE6RgyUCV06qzfm31dVXsys66zVL/uEdqFWvu4bq+3k3ps2vaDiObgx5A1V4PaTpWhvJP9wqAIaWf1Hyso73e1WBjD4hESyKYIIN8Lxbkd5Kf4EpsWwiWccltIFQwLMQ="
+    - secure: "QTy9McuVxkL7Kq5nVuIa9m3qPuqMWe2vmAobU0thkDwi0hZQA1nQQDEfGlxhbrAA63Xm5cHoWhCfW6ciPe5VfkZyqu8SwZM3wBN6zk1+L1ePuj6FnpwKDAw6Ep/IGSG8nV9VWEvvrue+0zVFNU39eAwh60rfAh/eOhiJin7Ye6Q="
+    - secure: "erfRgRoMeT/OYaOVqyLxeqHx5cZNmZgRKspToYJIiFF0NQS2IoXRNA88QsfPbFaKMkFJVb2uiB6HRId5CFfcmLHJ/BheIvpqEaXqaTssUhi//Ba67MRpYv29iBK0RQVA1T+vt7eB6ZAxe9nJoo1pAdHWNu6GgvGf9QmtGwtdCvg="
+    - secure: "FiEOla4eaiT97VPmWX7nw7tBd2zYQDpjsjV51Mgi44jGPdL9P6HVk9jzWiQfpaJohhqJX6GxiUoMvrg1Ik6ypumsVIq8WrVf8zDi9cLSxOBtH8jsT4gY4eyt1nCE8Ze46TMVsc0zO4VPXlGgd76LXKVteA6nByCWEyowvRnACmo="
+    - secure: "iAuy4wad/JIwIAlFkWhBiKI0giliux3MPlM2eO/7hSmYA26wjgcJXlhcRPVnT9RJ7+BF8xXsaaL4s+dXo/56daCGEV2wjoxKEGpGdXVtaYzKq2WJIYcThHa+ltkhZal6iftXUbygiu5yJ7d4eM2rVZfGgq3MR2pGrsAcqBgsPzQ="
+    - secure: "Xh33DX7FmwVWYPQSgcO+aHxLTcPSWaVDfH3kPg5iVYhYQyrRVAjmmpBYSj3rRkOiBI+tHO8KFASUSakPcZ7NvT/L/41Rh3DW5uZo0U45emzMNUzWEARxnvnVHOk7Qo7bAlgkU+FmCCUKjFLdeLC41r3dvwZnZjkthWiwj5V9vOQ="
+    - secure: "HIVYyC0xtn9amGFx8lzRtuv5u6fPFHL4VWGVSY0geWA9+DwXzcz3zpHjLSqBjH0YpATk7CIiaIlg4PCNlRfok9LOdMpBxBQx5v9JxNq0isbReRXtUlNdOVzapPLG4illM8RJNpiRkiSSncfFZQ9LggfKJgaKLjmgVwQEy+5oi6o="
+    - secure: "KLbWTO0Hou6ON5Vf+ZZTGNzF+V1rK7N1JSIaW4tc145zWpmRABSUAzme4FKI9ybvwDENvefYdvh8/uQzQfA42SA/qsdC7euAu5kXgrT5HYT8WChLgAgSD32v2gdWtNHczCdK++H/K35tmJUPSV4CPR+nphuK0DzYVv+Qd+Y3/6k="
+    - secure: "ebeV/k9jT50uwTXa1g4TRcyEn2oS2kyuqV5SL8ZlbWs6CDBIo/l1xvjHi3b//9wZ8ei3HkwdJ7XgWUM3b8NyekzGphz5i5dw8Z3MTkp40NYPX0/KR5+VAbb1aGawAAdHp6U6Vdvq0b9RQgmXZv0RECSmfsoH3eSuGP3W4jzasP8="
+    - secure: "Q0ODnHDmiwDun6mlxc+Rqg5tIcau19xTYFc2UWnqia2Csd7uDd27n6R0dALLK3mVcVRM3JhGGbgYPiRZGDJacMZXZtiguYPLsG6VKgGBwdMtOGQ6e+mpwhScA52ePNncUBDzXV339U9wAlmpQzptrSlj0cKLQQEb25F5EGKKkw8="
+    - secure: "VdCZA5SnC0k0QCvzoQJpufRHLFnQzG0HMwDv5DPNPgdyHSUPzieEgQwq87CnOVY57zgmKSmThpcyEY9VgZLu6HbZjuLOc1EjqMs4q38JoUGdG4Sj18wvjI7udTXWP3VVtsAKLr+NDSKRp4WhII9Vtvg/4QuKPJVARowra6RiK5c="
