@@ -2,7 +2,6 @@
 title: angularjs first experience
 date: '2013-07-12'
 description: angularjs first experience, 一篇angular经验帖
-author: dejian
 categories: 'code/angularjs'
 tags: [angularjs,experience,javascript]
 ---
