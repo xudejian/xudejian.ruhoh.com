@@ -18,7 +18,7 @@ script:
   # compile pages
   - mv -f config.xudejian.github.io.yml config.yml
   - bundle exec ruhoh compile
-after_script:
+after_success:
   - cp baidu_verify_25JCE7NwQ9.html google3674f8fdb9c1b1b4.html compiled/
   - cd compiled
   - git init
