@@ -8,6 +8,11 @@ author :
   twitter : xudejian
   feedburner : xudejian
 
+authors:
+  "Dejian Xu":
+    name : "Dejian Xu"
+    bio: "Dejian is a full stack programmer, DevOps"
+
 navigation :
   - archive
   - tags
