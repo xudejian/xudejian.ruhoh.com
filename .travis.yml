@@ -4,6 +4,7 @@ branches:
 language: ruby
 rvm:
   - 1.9.3
+bundler_args:
 before_script:
   # Set the git config stuff, so Git stops yelling at us
   - git config --global user.name "Dejian Xu (via Travis-CI)"
