@@ -5,8 +5,11 @@ description: Dejian's Blog, my dream here
 
 {{# posts.paginator }}
 <div class="post">
-  <h3 class="title"><a href="{{url}}">{{title}}</a> <span class="date">{{ date }}</span></h3>
-
+  <h3 class="title"><a href="{{url}}">{{title}}</a></h3>
+  <span class="date">{{ date }}</span>
+  {{# author }}
+  by {{ author }}
+  {{/ author }}
   {{{ summary }}}
 
   <div class="more">
