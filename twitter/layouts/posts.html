@@ -2,20 +2,24 @@
 layout : default
 ---
 
+<div itemscope itemtype="http://schema.org/Article" class="content">
 <div class="page-header">
-  <h1>{{ page.title }} {{# page.tagline }} <small>{{ . }}</small>{{/ page.tagline }}</h1>
+  <h1 itemprop="name">{{ page.title }} {{# page.tagline }} <small>{{ . }}</small>{{/ page.tagline }}</h1>
 </div>
 
 <div class="row-fluid post-full">
   <div class="span12">
-    <div class="date" itemscope itemtype="http://data-vocabulary.org/Person">
-      <span>{{page.date}}</span>
+    <div class="date">
+      <span itemprop="datePublished" content="{{page.date}}">{{page.date}}</span>
       {{# page.author }}
-      by <a rel="author" itemprop="name" target="_blank" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">
-       <span itemprop="name">{{ data.author.name }}</span></a>
+      by
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <a rel="author" itemprop="url" target="_blank" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">
+          <span itemprop="name">{{ data.author.name }}</span></a>
+      </span>
       {{/ page.author }}
     </div>
-    <div class="content">
+    <div itemprop="articleBody" class="content">
       {{{ page.content }}}
     </div>
     <ul class="tag_box inline">
@@ -55,3 +59,4 @@ layout : default
   </div>
 </div>
 
+</div>
