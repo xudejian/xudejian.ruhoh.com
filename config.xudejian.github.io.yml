@@ -30,6 +30,9 @@ _root:
     enable: false
   paginator:
     enable: false
+  sitemap:
+    changefreq: daily
+    priority: 0.9
 
 posts:
   sort: ["date", "desc"]
@@ -99,3 +102,8 @@ widgets :
 
   google_prettify :
     linenums : true
+
+plugins:
+  sitemap:
+    changefreq: daily
+    priority: 0.7
