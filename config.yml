@@ -31,7 +31,7 @@ _root:
   paginator:
     enable: false
   sitemap:
-    changefreq: daily
+    changefreq: hourly
     priority: 0.9
 
 posts:
