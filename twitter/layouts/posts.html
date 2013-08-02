@@ -12,11 +12,9 @@ layout : default
     <div class="date">
       <span itemprop="datePublished" content="{{page.date}}">{{page.date}}</span>
       {{# page.author }}
-      by
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <a rel="author" itemprop="url" target="_blank" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">
-          <span itemprop="name">{{ data.author.name }}</span></a>
-      </span>
+      by <a rel="author" target="_blank" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">
+          <span itemprop="author">{{ data.author.name }}</span>
+        </a>
       {{/ page.author }}
     </div>
     <div itemprop="articleBody" class="content">
