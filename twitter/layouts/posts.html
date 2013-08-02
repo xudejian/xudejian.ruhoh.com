@@ -2,7 +2,7 @@
 layout : default
 ---
 
-<div itemscope itemtype="http://schema.org/Article" class="content">
+<div itemscope itemtype="http://schema.org/BlogPosting" class="content">
 <div class="page-header">
   <h1 itemprop="name">{{ page.title }} {{# page.tagline }} <small>{{ . }}</small>{{/ page.tagline }}</h1>
 </div>
@@ -12,9 +12,7 @@ layout : default
     <div class="date">
       <span itemprop="datePublished" content="{{page.date}}">{{page.date}}</span>
       {{# page.author }}
-      by <a rel="author" target="_blank" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">
-          <span itemprop="author">{{ data.author.name }}</span>
-        </a>
+      by <a itemprop="author" target="_blank" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">{{ data.author.name }}</a>
       {{/ page.author }}
     </div>
     <div itemprop="articleBody" class="content">
