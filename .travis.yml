@@ -23,6 +23,7 @@ script:
   - bundle exec ruhoh compile
 after_success:
   - cp baidu_verify_25JCE7NwQ9.html google3674f8fdb9c1b1b4.html compiled/
+  - cp BingSiteAuth.xml compiled/
   - cd compiled
   - git init
   - git remote add origin $REPO
