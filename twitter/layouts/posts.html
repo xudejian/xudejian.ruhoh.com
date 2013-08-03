@@ -2,7 +2,7 @@
 layout : default
 ---
 
-<div itemscope itemtype="http://schema.org/BlogPosting" class="content">
+<div itemscope itemtype="http://schema.org/BlogPosting">
 <div class="page-header">
   <h1 itemprop="name">{{ page.title }} {{# page.tagline }} <small>{{ . }}</small>{{/ page.tagline }}</h1>
 </div>
@@ -10,9 +10,10 @@ layout : default
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
+      Posted
       <span itemprop="datePublished" content="{{page.date}}">{{page.date}}</span>
       {{# page.author }}
-      by <a itemprop="author" target="_blank" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">{{ data.author.name }}</a>
+      by <a itemprop="author" rel="author" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">{{ data.author.name }}</a>
       {{/ page.author }}
     </div>
     <div itemprop="articleBody" class="content">
@@ -27,7 +28,7 @@ layout : default
       {{> categories_list }}
     {{/ page.categories }}
     </ul>
-    <ul class="tag_box inline">
+    <ul class="tag_box inline" itemprop="keywords">
       <li><i class="icon-tags"></i></li>
     {{# page.tags }}
       {{> tags_list }}
@@ -35,7 +36,7 @@ layout : default
     </ul>
     <hr>
     <div class="pagination">
-      <ul>
+      <ul itemprop="breadcrumb">
         {{# page.previous }}
           <li class="prev"><a href="{{ url }}" title="{{ title }}">&larr; Previous</a></li>
         {{/ page.previous }}
