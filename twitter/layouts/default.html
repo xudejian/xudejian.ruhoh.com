@@ -33,13 +33,13 @@
     <link rel="canonical" href="{{ page.url }}" />
   </head>
 
-  <body itemscope itemtype="http://schema.org/WebPage">
+  <body>
 
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
           <a class="brand" href="{{urls.base_path}}">{{ data.title }}</a>
-          <ul class="nav" itemprop="breadcrumb">
+          <ul class="nav">
             {{# data.navigation?to__root }}
               {{> pages_list }}
             {{/ data.navigation?to__root }}
