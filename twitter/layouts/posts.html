@@ -4,6 +4,7 @@ layout : default
 
 <div itemscope itemtype="http://schema.org/BlogPosting">
 <div class="page-header">
+  <meta itemprop="url" content="{{ page.url }}">
   <h1 itemprop="name">{{ page.title }} {{# page.tagline }} <small>{{ . }}</small>{{/ page.tagline }}</h1>
 </div>
 
@@ -11,12 +12,10 @@ layout : default
   <div class="span12">
     <div class="date">
       Posted
-      <span itemprop="datePublished" content="{{page.date}}">{{page.date}}</span>
-      {{# page.author }}
-      by <a itemprop="author" rel="author" href="https://plus.google.com/{{ data.author.googleplus }}?rel=author">{{ data.author.name }}</a>
-      {{/ page.author }}
+      <span content="{{page.date}}" itemprop="datePublished">{{page.date}}</span>
+      by <a class="fn" href="https://plus.google.com/{{data.author.googleplus }}" rel="author" itemprop="author">{{ data.author.name }}</a>
     </div>
-    <div itemprop="articleBody" class="content">
+    <div class="content" itemprop="articleBody">
       {{{ page.content }}}
     </div>
     <div class="g-plus" data-action="share" data-height="24"></div>
@@ -28,7 +27,7 @@ layout : default
       {{> categories_list }}
     {{/ page.categories }}
     </ul>
-    <ul class="tag_box inline" itemprop="keywords">
+    <ul class="tag_box inline">
       <li><i class="icon-tags"></i></li>
     {{# page.tags }}
       {{> tags_list }}

@@ -5,20 +5,18 @@ priority: 1.0
 ---
 
 {{# posts.paginator }}
-<div itemscope itemtype="http://schema.org/BlogPosting" class="post">
-  <h3 class="title">
-    <a itemprop="url" href="{{url}}">
-      <span itemprop="name">{{title}}<span>
+<div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <h3 class="title" itemprop="name">
+    <a href="{{url}}" rel="bookmark" itemprop="url">
+      {{title}}
     </a>
   </h3>
-  Posted <span itemprop="datePublished" content="{{ date }}" class="date">{{ date }}</span>
-  {{# author }}
-  by <span itemprop="author">{{ author }}</span>
-  {{/ author }}
+  Posted <span content="{{ date }}" class="date" itemprop="datePublished">{{ date }}</span>
+  by <a class="fn" href="https://plus.google.com/{{data.author.googleplus }}" rel="author" itemprop="author">{{ author }}</a>
   {{{ summary }}}
 
   <div class="more">
-    <a href="{{url}}" class="btn btn-small">read more..</a>
+    <a href="{{url}}" class="btn btn-small" itemprop="url">read more..</a>
   </div>
 </div>
 {{/ posts.paginator }}
