@@ -13,8 +13,8 @@ layout : default
     <div class="date">
       Posted
       <span content="{{page.date}}" itemprop="datePublished">{{page.date}}</span>
-      by <a class="fn" href="https://plus.google.com/{{data.author.googleplus
-        }}?rel=author" rel="author" itemprop="author">{{ data.author.name }}</a>
+      by <a href="https://plus.google.com/{{data.author.googleplus
+        }}?rel=author" content="{{ data.author.name }}" itemprop="author">{{ data.author.name }}</a>
     </div>
     <div class="content" itemprop="articleBody">
       {{{ page.content }}}
