@@ -6,13 +6,15 @@ priority: 1.0
 
 {{# posts.paginator }}
 <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <meta itemprop="author" content="{{ author }}">
   <h3 class="title" itemprop="name">
     <a href="{{url}}" rel="bookmark" itemprop="url">
       {{title}}
     </a>
   </h3>
   Posted <span content="{{ date }}" class="date" itemprop="datePublished">{{ date }}</span>
-  by <a class="fn" href="https://plus.google.com/116305544434538996428?rel=author" rel="author" itemprop="author">{{ author }}</a>
+  by {{ author }}
+  <a href="https://plus.google.com/116305544434538996428?rel=author" target="_blank">G+</a>
   {{{ summary }}}
 
   <div class="more">
