@@ -58,7 +58,7 @@ posts:
     # root_page has been set to the root for a more traditional style blog feel.
     root_page: '/'
   sitemap:
-    changefreq: daily
+    changefreq: hourly
     priority: 0.7
 
 # Enable the asset pipeline to process stylesheets and javascripts using sass, coffeescript, etc.
