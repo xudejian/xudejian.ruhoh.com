@@ -87,3 +87,7 @@ Google 搜索外观就是在谷歌搜索结果中，显示作者信息，展示�
 ### 后续观察
 
 我会持续记录对作者信息的观察和尝试，如果读者有什么建议，欢迎留下你的评论。
+
+#### 相关文章
+
+[google authorship microdata research 02](/seo/google/google-authorship-microdata-research-02)
