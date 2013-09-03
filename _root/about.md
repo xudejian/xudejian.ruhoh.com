@@ -9,7 +9,8 @@ description: Dejian Xu, 西北工业大学, C C++ Python Ruby Java Javascript Co
 
 常研究各种东西，由于方法不当和资质愚钝，常常走弯路。
 
-对微软系语言不感冒，常年使用C系列做开发，精通前后端技术。
+常年使用C系列做开发，fullstack developer，DevOps。
+对微软系语言不感冒。
 
 常年潜水于外海，偶尔出来冒个泡。
 
@@ -20,7 +21,7 @@ description: Dejian Xu, 西北工业大学, C C++ Python Ruby Java Javascript Co
 
 离开了天涯，到了Moode，
 在这里开始实践敏捷开发，搭建公司私有云，做各种Android应用，做各种HTML5应用，
-TDD，BDD，Nodejs，Ruby，各种超前中国公司的东西。
+TDD，BDD，Nodejs，Ruby，持续集成，各种超前中国公司的东西。
 
 #### 2010年初
 
