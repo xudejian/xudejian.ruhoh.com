@@ -17,6 +17,8 @@ description: Dejian Xu, 西北工业大学, C C++ Python Ruby Java Javascript Co
 偶尔会有个小作品，
 某段时间研究XXX，做个小玩意[DNSLite](https://play.google.com/store/apps/details?id=me.xu.DNSLite)，欢迎大家捧场。
 
+[Github Resume](http://resume.github.io/?xudejian)
+
 #### 2012年中
 
 离开了天涯，到了Moode，
