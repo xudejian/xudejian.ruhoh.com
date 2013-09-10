@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://xudejian.github.io/sitemap.xml
