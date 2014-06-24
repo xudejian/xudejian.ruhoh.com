@@ -33,6 +33,9 @@ _root:
   sitemap:
     changefreq: hourly
 
+incomplete:
+  use: ignore
+
 posts:
   sort: ["date", "desc"]
   permalink: "/:categories/:title/"
